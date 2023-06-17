@@ -23,16 +23,20 @@ export class HomePage {
     private barcodeScanner: BarcodeScanner,
     private http: HttpClient
   ) {
-    this.supportedUserTypeConfig = [ {
-      name: "Teacher",
-      code: 'teacher',
-      image: 'ic_teacher.svg'
-    },
+    this.supportedUserTypeConfig = [ 
+    //   {
+    //   name: "Teacher",
+    //   code: 'teacher',
+    //   image: 'ic_teacher.svg'
+    // },
     {
       name: "Student",
       code: 'student',
       image: 'ic_student.svg'
-    }]
+    }
+   ]
+   this.selectedUserType = this.supportedUserTypeConfig[0].code;
+   this.userType = this.supportedUserTypeConfig[0].name;
   }
 
   URLToObject(url: any) {
